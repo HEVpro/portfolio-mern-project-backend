@@ -11,7 +11,9 @@ connection();
 // Allow express.json
 app.use(express.json({ extended: true }));
 // Allow CORS
-app.use(cors());
+app.use(cors({credentials: true, origin: true}));
+app.options("*", cors());
+
 
 // PORT of the app
 const port = process.env.port || 3001;
