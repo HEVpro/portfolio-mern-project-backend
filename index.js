@@ -16,7 +16,7 @@ app.options("*", cors());
 
 
 // PORT of the app
-const port = process.env.port || 3001;
+const PORT = process.env.PORT || 3001;
 
 // Routes imports
 app.use('/api/users', require('./routes/users'));
@@ -25,6 +25,6 @@ app.use('/api/projects', require('./routes/projects'));
 app.use('/api/tasks', require('./routes/tasks'));
 
 // run the server
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Server running on: ${port}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on: ${PORT}`);
 });
